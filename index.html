@@ -279,6 +279,86 @@
   .preview-card h4{ font-size:22px; font-style:italic; margin-bottom:6px; }
   .preview-card p{ font-size:16px; color:var(--ink-soft); margin-bottom:0; }
 
+  /* ---------- nada-bindu-kala tab module ---------- */
+  .tabmodule{ margin-top:10px; }
+  .tab-scroll{
+    overflow-x:auto;
+    -webkit-overflow-scrolling:touch;
+    border-bottom:1px solid var(--rule);
+    margin-bottom:0;
+    scrollbar-width:thin;
+    scrollbar-color:var(--rule) transparent;
+  }
+  .tab-list{
+    display:flex;
+    gap:2px;
+    min-width:max-content;
+    padding-bottom:1px;
+  }
+  .tab-btn{
+    font-family:'Inter', sans-serif;
+    font-size:12.5px;
+    letter-spacing:.05em;
+    text-transform:uppercase;
+    color:var(--muted);
+    background:transparent;
+    border:none;
+    border-bottom:2px solid transparent;
+    padding:12px 16px 10px 16px;
+    cursor:pointer;
+    white-space:nowrap;
+    transition:color .15s ease, border-color .15s ease;
+  }
+  .tab-btn .tab-num{
+    font-family:'Cormorant Garamond', serif;
+    font-style:italic;
+    color:var(--gold);
+    margin-right:6px;
+    font-size:14px;
+  }
+  .tab-btn:hover{ color:var(--maroon); }
+  .tab-btn.active{
+    color:var(--maroon-deep);
+    border-bottom-color:var(--maroon);
+    font-weight:600;
+  }
+  .tab-panels{
+    background:var(--paper-deep);
+    border:1px solid var(--rule);
+    border-top:none;
+    border-radius:0 0 8px 8px;
+    padding:32px 30px;
+  }
+  .tab-panel{ display:none; animation:fadein .25s ease; }
+  .tab-panel.active{ display:block; }
+  @keyframes fadein{ from{opacity:0;} to{opacity:1;} }
+  .tab-panel h4{
+    font-size:26px;
+    font-style:italic;
+    margin-bottom:4px;
+  }
+  .tab-panel .tab-dn{
+    font-size:16px;
+    color:var(--gold);
+    margin-bottom:18px;
+    display:block;
+  }
+  .tab-panel p{ font-size:16.5px; }
+  .tab-panel .tab-cite{
+    margin-top:18px;
+    padding-top:14px;
+    border-top:1px dashed var(--rule);
+    font-family:'Inter', sans-serif;
+    font-size:12px;
+    letter-spacing:.05em;
+    text-transform:uppercase;
+    color:var(--gold);
+  }
+  @media (max-width:600px){
+    .tab-panels{ padding:24px 18px; }
+    .tab-panel h4{ font-size:22px; }
+  }
+
   /* ---------- footer ---------- */
   footer{
     padding:40px 0 70px 0;
@@ -620,9 +700,228 @@
     </div>
   </section>
 
+  <!-- ================= NADA-BINDU-KALA: SCIENCE OF SOUND ================= -->
+  <section id="nada-bindu-kala">
+    <p class="eyebrow section-eyebrow">Objective Register · Highest-Level Synthesis</p>
+    <h2 class="section-title">Nāda, Bindu, Kalā: The Science of Sound</h2>
+    <p class="section-dn devanagari">नाद-बिन्दु-कला — शब्दविद्यायाः मूलतत्त्वम्</p>
+
+    <p class="lede">Everything argued above about Mātṛkā and Mālinī presumes a still deeper triad that the tradition treats as prior to any alphabet whatsoever: Nāda (resonance), Bindu (the concentrated point), and Kalā (the radiant fraction that lets the point become many). The fifteen tabs below hold this triad up to fifteen distinct, scholarly angles of examination, each written to whitepaper standard — primary-text claim, secondary scholarly reception, and this paper's own synthesis kept visibly distinct at every step.</p>
+
+    <div class="note">
+      <b>Methodological note</b>
+      Each tab below distinguishes three tiers of claim: (1) what a named primary text states or is reasonably read as stating; (2) how modern scholars of Kashmir Śaivism and Tantric Studies — chiefly André Padoux, Alexis Sanderson, Mark S. G. Dyczkowski, Paul Muller-Ortega, Lilian Silburn, and Jaideva Singh — have glossed, dated, or contested that reading; and (3) where this paper itself synthesises across sources for expository coherence. Tier-3 synthesis is flagged explicitly wherever it occurs, since the sequential Nāda→Bindu→Kalā presentation used throughout is a pedagogical ordering this paper adopts for clarity, not a claim that every source surveyed states the doctrine in precisely this form or sequence.
+    </div>
+
+    <div class="tabmodule">
+      <div class="tab-scroll">
+        <div class="tab-list" role="tablist" aria-label="Nada Bindu Kala Perspectives">
+          <button class="tab-btn active" data-tab="t1" role="tab" aria-selected="true"><span class="tab-num">I</span>Nāda Defined</button>
+          <button class="tab-btn" data-tab="t2" role="tab" aria-selected="false"><span class="tab-num">II</span>Bindu Defined</button>
+          <button class="tab-btn" data-tab="t3" role="tab" aria-selected="false"><span class="tab-num">III</span>Kalā Defined</button>
+          <button class="tab-btn" data-tab="t4" role="tab" aria-selected="false"><span class="tab-num">IV</span>The Triadic Cosmogony</button>
+          <button class="tab-btn" data-tab="t5" role="tab" aria-selected="false"><span class="tab-num">V</span>Parā Nāda</button>
+          <button class="tab-btn" data-tab="t6" role="tab" aria-selected="false"><span class="tab-num">VI</span>Four Levels of Vāk</button>
+          <button class="tab-btn" data-tab="t7" role="tab" aria-selected="false"><span class="tab-num">VII</span>Kuṇḍalinī and Nāda</button>
+          <button class="tab-btn" data-tab="t8" role="tab" aria-selected="false"><span class="tab-num">VIII</span>Bindu as Sāmarasya</button>
+          <button class="tab-btn" data-tab="t9" role="tab" aria-selected="false"><span class="tab-num">IX</span>Cakra–Kalā Map</button>
+          <button class="tab-btn" data-tab="t10" role="tab" aria-selected="false"><span class="tab-num">X</span>The Ten Nādas</button>
+          <button class="tab-btn" data-tab="t11" role="tab" aria-selected="false"><span class="tab-num">XI</span>Kāmakalā</button>
+          <button class="tab-btn" data-tab="t12" role="tab" aria-selected="false"><span class="tab-num">XII</span>Spanda and Pulse</button>
+          <button class="tab-btn" data-tab="t13" role="tab" aria-selected="false"><span class="tab-num">XIII</span>Acoustics Compared</button>
+          <button class="tab-btn" data-tab="t14" role="tab" aria-selected="false"><span class="tab-num">XIV</span>Praṇava Analysis</button>
+          <button class="tab-btn" data-tab="t15" role="tab" aria-selected="false"><span class="tab-num">XV</span>Closing Synthesis</button>
+        </div>
+      </div>
+
+      <div class="tab-panels">
+
+        <div class="tab-panel active" id="t1">
+          <h4>Nāda: Resonance Prior to Any Word</h4>
+          <span class="tab-dn devanagari">नादः — अनाहतशब्दः</span>
+          <p><strong>Primary claim.</strong> Nāda names vibration as such, prior to its differentiation into any particular phoneme. The tradition distinguishes āhata nāda, "struck" sound produced by the contact of two objects (including the vocal apparatus), from anāhata nāda, the "unstruck" resonance said to precede and underlie all struck sound without itself arising from any collision. The distinction recurs across Śaiva, Śākta, and Haṭha sources with enough consistency that Dyczkowski, in his study of Kashmir Śaiva vibrational doctrine, treats āhata/anāhata as close to a shared technical baseline across otherwise divergent lineages, even where their cosmogonic elaborations of it differ sharply.</p>
+          <p><strong>Scholarly reception.</strong> Padoux's <em>Vāc: The Concept of the Word in Selected Hindu Tantras</em> cautions against reading anāhata nāda as simply "silence" in the colloquial sense; he treats it instead as a technical category occupying a specific place within a graded ontology of sound-levels, functionally continuous with, rather than opposed to, audible speech. Sanderson's work on the textual history of the Śaiva tantras further notes that the relative weight given to Nāda as an independent ontological category — as against treating it merely as a preparatory yogic experience — varies considerably between the dualist Siddhānta corpus and the non-dualist Trika and Krama systems this series has drawn on throughout.</p>
+          <p><strong>This paper's synthesis.</strong> The distinction is not acoustic trivia; it functions, across the sources surveyed, as the tradition's way of insisting that audible speech is a late, derivative case of a more general resonant capacity belonging to consciousness itself. Where Part Three of this series treated the phoneme as constitutive rather than merely descriptive of reality, Nāda is what the phoneme is here read as a differentiation <em>of</em> — every mātṛkā, in either the natural or the Mālinī order examined above, a particular knot tied into an otherwise undifferentiated resonant continuum.</p>
+          <p><strong>Open question.</strong> Whether anāhata nāda is best modelled as ontologically prior to Bindu (as the sequential presentation in this tab-set assumes) or as co-arising with it is a point on which Dyczkowski notes the manuscript tradition itself is not fully uniform; this paper follows the more common sequential reading without treating the matter as closed.</p>
+          <p class="tab-cite">Primary · Śiva Sūtra tradition on Śabda-rāśi — Secondary · Padoux (1990); Dyczkowski (1989)</p>
+        </div>
+
+        <div class="tab-panel" id="t2">
+          <h4>Bindu: The Point of Total Concentration</h4>
+          <span class="tab-dn devanagari">बिन्दुः — संहतशक्तिबिन्दुः</span>
+          <p><strong>Primary claim.</strong> Bindu, literally "point" or "drop," names the moment at which the diffuse resonance of Nāda contracts to a single, undifferentiated point of concentrated potential — consciousness and its power (Śiva and Śakti, in the Kashmir Śaiva idiom) held in such tight unity that no distinction between them is yet operative. It is frequently visualised, rather than merely described, as a dimensionless point of light, precisely because any extended shape would already presuppose the differentiation Bindu itself precedes.</p>
+          <p><strong>Scholarly reception.</strong> Muller-Ortega's <em>The Triadic Heart of Śiva</em> treats parabindu specifically as the term Abhinavagupta and his commentators use to keep this concentration-point distinct from the merely visual bindu of later, more devotional maṇḍala iconography — a distinction Muller-Ortega argues is frequently collapsed in popular presentations but is doctrinally load-bearing in the Trika sources this series draws on. Silburn's study of Kuṇḍalinī doctrine likewise treats Bindu as functioning less as a static "thing" than as a name for a threshold condition, cautioning against reifying it into an object the way some later haṭha-yogic physiological literature tends to.</p>
+          <p><strong>This paper's synthesis.</strong> Bindu is the hinge on which the entire triad turns: Nāda is resonance without a locus; Bindu is locus without yet any further multiplicity; Kalā, examined next, is the multiplicity Bindu makes possible once it consents to divide. Read this way, Bindu is not a way-station passed through once, but a threshold condition the tradition holds to remain, in principle, continuously accessible beneath every subsequent differentiation.</p>
+          <p><strong>Open question.</strong> Whether the "point" language is intended literally (a genuine ontological locus) or is, as Padoux suggests for several comparable Tantric technical terms, primarily a mnemonic and meditative device whose spatial imagery should not be over-interpreted metaphysically, remains genuinely contested across the secondary literature surveyed here.</p>
+          <p class="tab-cite">Primary · Parā-bindu doctrine, Trika sources on Śiva–Śakti sāmarasya — Secondary · Muller-Ortega (1989); Silburn (1988)</p>
+        </div>
+
+        <div class="tab-panel" id="t3">
+          <h4>Kalā: The Radiant Fraction</h4>
+          <span class="tab-dn devanagari">कला — विभागशक्तिः</span>
+          <p><strong>Primary claim.</strong> Kalā names the power by which the undivided Bindu becomes capable of division at all — a "digit" or "fraction" of the whole, as in the sixteen kalās traditionally ascribed to the moon, each a partial radiance of a single undivided light. Kalā is not multiplicity itself but the capacity for multiplicity, the first admission of "more than one" into a field that was, at the level of Bindu, still strictly singular.</p>
+          <p><strong>Scholarly reception.</strong> Padoux notes that "kalā" is one of the more heavily overloaded terms in Tantric technical vocabulary, carrying distinct but related senses in different contexts: a fraction of the moon's light, a fraction of the day (a unit of time), and, in the sense used here, a fraction of undifferentiated creative power. Sanderson's textual-historical work traces how the specifically cosmogonic sense of kalā used in this tab-set becomes more systematised in later Śaiva Siddhānta tattva-hierarchies than in earlier Trika sources, where the term is used more fluidly.</p>
+          <p><strong>This paper's synthesis.</strong> It is Kalā, on the reading this paper adopts, that eventually issues in the fifty phonemes this part's main essay has examined in two orders: Mātṛkā and Mālinī are, from this vantage, two different disciplines applied to material that Kalā has already begun to fraction out of Bindu's prior unity. The sixteen-kalā lunar schema referenced above is directly continuous with the Ṣoḍaśī-kalā doctrine treated in this series' companion Ṣoḍhā-Nyāsa material, where the sixteen radiances are placed along the ascending spinal axis.</p>
+          <p><strong>Open question.</strong> Because "kalā" carries genuinely distinct technical senses across sources (cosmogonic fraction, lunar phase, temporal unit, and — in Śrīvidyā specifically — a component of the Śrīcakra's own structure), this paper's unified presentation risks flattening distinctions a specialist reader working across multiple lineages simultaneously would want kept separate.</p>
+          <p class="tab-cite">Primary · Ṣoḍaśī-kalā doctrine — Secondary · Padoux (1990); Sanderson (2007, 2014)</p>
+        </div>
+
+        <div class="tab-panel" id="t4">
+          <h4>The Triadic Cosmogony: Nāda → Bindu → Kalā</h4>
+          <span class="tab-dn devanagari">क्रमः — नादात् बिन्दुः, बिन्दोः कला</span>
+          <p><strong>Primary claim.</strong> Read together rather than separately, the triad describes a single cosmogonic sequence rather than three independent categories: undifferentiated resonance (Nāda) contracts to a point of concentrated, still-unified potential (Bindu), which in turn admits the possibility of partial radiance (Kalā) — the first genuine plurality, out of which phoneme, word, and world subsequently unfold in the four-level descent of Vāk this series' earlier parts have already traced.</p>
+          <p><strong>Scholarly reception.</strong> The Tantrāloka's own emanative sequence of tattvas, as analysed by Sanderson and by Dyczkowski, places this triad within a considerably longer chain of thirty-six or more principles, of which Nāda-Bindu-Kalā occupies only the uppermost, subtlest register — immediately below the undifferentiated Śiva- and Śakti-tattvas and above the more familiar categories (Sadāśiva, Īśvara, Śuddhavidyā) that this series has not treated in detail. Presenting the triad in isolation, as this tab-set does for expository focus, is therefore a deliberate narrowing of a much longer emanative scheme rather than a claim that the full tattva sequence reduces to these three terms alone.</p>
+          <p><strong>This paper's synthesis.</strong> The sequence, so narrowed, is asymmetric in a way that matters for the whole tab-set's argument: Nāda does not require Bindu to exist, but Bindu presupposes Nāda as the resonance it concentrates, and Kalā presupposes Bindu as the unity it first divides. The order Nāda–Bindu–Kalā is, in this strict sense, irreversible within the doctrine as presented here, however freely later stages may be revisited contemplatively once traversed — a point directly relevant to Tab VII's reading of Kuṇḍalinī ascent as a literal retracing of this sequence.</p>
+          <p><strong>Open question.</strong> Whether the three-term triad should be read as ontologically separable stages (as this tab-set's sequential language implies) or as three simultaneous aspects of a single, undivided act of emanation — the reading several non-dual commentators explicitly prefer, precisely to avoid smuggling temporal succession into what is meant to be an atemporal unfolding — is not resolved by the sources surveyed and is flagged here rather than adjudicated.</p>
+          <p class="tab-cite">Primary · Tantrāloka on the emanative sequence of tattvas — Secondary · Sanderson (2007); Dyczkowski (1989)</p>
+        </div>
+
+        <div class="tab-panel" id="t5">
+          <h4>Parā Nāda: The Pre-Phonemic Ground</h4>
+          <span class="tab-dn devanagari">परानादः — शब्दातीतः शब्दः</span>
+          <p><strong>Primary claim.</strong> Parā Nāda, "supreme resonance," is the term reserved for Nāda specifically in its most undifferentiated aspect — prior even to the incipient contraction Bindu represents. It is deliberately paradoxical: a "sound beyond sound," audible to no ear because it precedes the very distinction between a sound and its hearer.</p>
+          <p><strong>Scholarly reception.</strong> Several commentators treat Parā Nāda as functionally identical to Parā Vāk, the highest of the four levels of speech this series has examined — the terms differing in emphasis (Vāk stresses meaning-bearing potential; Nāda stresses vibratory potential) rather than in referent. Padoux, however, is more cautious than this convenient identification suggests: he notes that different textual streams within the Trika corpus foreground one term over the other for reasons that appear to be lineage-specific rather than doctrinally arbitrary, and that treating the two as simply interchangeable — as this tab-set does for expository economy — smooths over a genuine terminological plurality in the primary sources.</p>
+          <p><strong>This paper's synthesis.</strong> This identification matters for the present part's argument: if Parā Nāda and Parā Vāk name substantially the same reality, then Mātṛkā and Mālinī — two disciplines of ordering applied to the fifty phonemes — are, at their root, two disciplines applied to differentiations of a single resonant ground neither ordering can fully exhaust. Every later, more differentiated stage this tab-set surveys can therefore be read as a specific, partial recovery of what Parā Nāda already holds without division.</p>
+          <p><strong>Open question.</strong> Whether Parā Nāda is better modelled as a fourth, "hidden" level standing above the traditional four-level Parā–Paśyantī–Madhyamā–Vaikharī schema (making five levels in total), or as another name for Parā itself at its subtlest aspect (keeping the schema at four), is treated inconsistently enough across secondary sources that this paper declines to adjudicate it and flags the ambiguity explicitly.</p>
+          <p class="tab-cite">Primary · Trika sources on Parā Nāda / Parā Vāk identification — Secondary · Padoux (1990)</p>
+        </div>
+
+        <div class="tab-panel" id="t6">
+          <h4>The Four Levels of Vāk, Re-Read Through the Triad</h4>
+          <span class="tab-dn devanagari">परा-पश्यन्ती-मध्यमा-वैखरी</span>
+          <p><strong>Primary claim.</strong> Overlaying Nāda-Bindu-Kalā onto the four traditional levels of speech gives a second, complementary map of the same descent: Parā corresponds to Parā Nāda examined above; Paśyantī, the "seeing" level at which meaning is grasped as an undivided whole before any sequential unfolding, corresponds closely to Bindu's still-unified potential; Madhyamā, the "intermediate" level at which meaning begins to differentiate into a mental sequence of words, corresponds to Kalā's admission of plurality; and Vaikharī, articulated physical speech, is the fully differentiated product — the phonemes of Mātṛkā and Mālinī alike.</p>
+          <p><strong>Scholarly reception.</strong> This four-level schema is itself older than, and originally independent of, the Nāda-Bindu-Kalā triad: Padoux traces its grammatical roots to Bhartṛhari, whose sphoṭa theory (this series' Part Two) is a linguistic-philosophical project rather than a Tantric cosmogonic one. The mapping proposed in this tab is therefore a later Tantric overlay onto an earlier grammatical framework, and Padoux is explicit that not every Tantric source performs this overlay in the same way — some align Bindu with Paśyantī, as here, while others reserve Bindu for a point strictly between Parā and Paśyantī, treating the correspondence as looser than a one-to-one mapping.</p>
+          <p><strong>This paper's synthesis.</strong> Held loosely rather than as a precise isomorphism, the two maps function as complementary rather than competing lenses on one descent, each drawing attention to a different aspect of the same movement from unity toward differentiated expression: the Vāk schema foregrounds meaning's unfolding, the Nāda-Bindu-Kalā schema foregrounds vibration's unfolding, and the present tab-set treats their convergence as instructive precisely because it is not perfectly exact.</p>
+          <p><strong>Open question.</strong> Given that the two schemas originate in different disciplinary contexts (grammar and Tantric cosmogony) and were only later brought into correspondence, whether the correspondence itself carries independent doctrinal weight, or is better read as a later interpretive convenience bridging two originally separate frameworks, remains an open question this paper does not resolve.</p>
+          <p class="tab-cite">Primary · Series Part Two, Sphoṭa and the levels of Vāk — Secondary · Padoux (1990)</p>
+        </div>
+
+        <div class="tab-panel" id="t7">
+          <h4>Kuṇḍalinī as Nāda in Ascent</h4>
+          <span class="tab-dn devanagari">कुण्डलिनी — ऊर्ध्वगामी नादः</span>
+          <p><strong>Primary claim.</strong> Haṭha and Tantric physiological doctrine describes the awakened Kuṇḍalinī's ascent through the central channel as accompanied by an internally perceived resonance — a subtle, unstruck sound reported to change in character as the ascent passes each successive cakra, sometimes catalogued as a graded series (examined in Tab X below). On this reading, the ascent is not merely an energetic or physiological event but a literal traversal back up the very sequence this tab-set has been describing in reverse: from the differentiated, "struck" quality of ordinary embodied experience toward the unstruck resonance of Parā Nāda at the crown.</p>
+          <p><strong>Scholarly reception.</strong> Silburn's study of Kuṇḍalinī doctrine treats the nāda-ascent narrative as considerably more securely attested in the Haṭha-yogic and later Tantric physiological literature than in the earlier, more strictly philosophical Trika sources this series has otherwise privileged — a difference in genre she attributes to the later literature's greater interest in reproducible, embodied markers of progress along the path, as against the earlier sources' comparatively abstract cosmogonic concerns. This is a caution worth stating plainly: the vivid, cakra-by-cakra nāda narrative is better attested as Haṭha-yogic doctrine than as Trika Śaiva doctrine proper, even though this tab-set draws on both bodies of literature to construct a single composite account.</p>
+          <p><strong>This paper's synthesis.</strong> Read with that caveat in place, the correlation gives the Mātṛkā/Mālinī distinction examined in this part's main essay a further physiological correlate: Antar Nyāsa's substitution of the interleaved order at the internal, ascending stage (Section III above) can be read as an attempt to align the practitioner's phonemic recitation with the same upward trajectory Kuṇḍalinī doctrine independently describes, even where the two bodies of literature developed largely independently of one another.</p>
+          <p><strong>Open question.</strong> Whether the internally reported "sounds" associated with each cakra in this literature should be read as literal auditory percepts, as culturally-shaped interpretations of genuine but non-specific interoceptive signals, or as a primarily didactic device for marking progress along an otherwise hard-to-verify contemplative path is a question this paper's sources do not settle, and on which this paper does not take a position.</p>
+          <p class="tab-cite">Primary · Haṭha-yogic Kuṇḍalinī-nāda narrative — Secondary · Silburn (1988); series Part Six</p>
+        </div>
+
+        <div class="tab-panel" id="t8">
+          <h4>Bindu as Śiva–Śakti Sāmarasya</h4>
+          <span class="tab-dn devanagari">बिन्दुः — शिवशक्तिसामरस्यम्</span>
+          <p><strong>Primary claim.</strong> Some Trika and Śrīvidyā sources further resolve Bindu itself into two aspects held in perfect fusion (sāmarasya): a "white" bindu associated with Śiva and a "red" bindu associated with Śakti, whose complete, undifferentiated union constitutes Bindu proper. Differentiation — and hence Kalā — is said to begin precisely at the point where this fusion admits the barest asymmetry, one aspect very slightly emphasised over the other.</p>
+          <p><strong>Scholarly reception.</strong> This bipartite reading of Bindu is considerably more prominent in Śrīvidyā sources, as documented by scholars of that tradition's ritual and iconographic corpus, than in the earlier Trika material this series draws on for its main essay; Sanderson's account of the historical relationship between Trika and the later Śrīvidyā-Kaula synthesis suggests the white/red bindu elaboration is a comparatively later systematisation, developed as Śrīvidyā absorbed and reworked earlier Kaula ritual elements rather than a doctrine already fully explicit in the earliest Trika strata.</p>
+          <p><strong>This paper's synthesis.</strong> Read as a later but doctrinally consistent elaboration rather than a competing account, this finer-grained model matters to the science of sound specifically because it locates the origin of all subsequent asymmetry — including the asymmetric, non-reversible ordering of the Mātṛkā and Mālinī sequences examined in this part's main essay — at the very first departure from perfect symmetry, rather than treating asymmetry as something introduced only much later, at the level of the fifty phonemes themselves.</p>
+          <p><strong>Open question.</strong> Whether this white/red elaboration should be read back into earlier Trika Bindu-doctrine as an implicit but unstated feature, or whether doing so retrojects a specifically Śrīvidyā development onto sources that did not yet hold it, is a historical question this paper flags rather than settles.</p>
+          <p class="tab-cite">Primary · Śrīvidyā sources on Śiva–Śakti bindu-bheda — Secondary · Sanderson (2014)</p>
+        </div>
+
+        <div class="tab-panel" id="t9">
+          <h4>The Cakra–Kalā Correspondence Map</h4>
+          <span class="tab-dn devanagari">चक्रेषु कलाविन्यासः</span>
+          <p><strong>Primary claim.</strong> Antar Mātṛkā-Nyāsa, examined in this part's main essay, assigns groups of phonemes to the lotus-petals of the seven principal cakras; the Nāda-Bindu-Kalā doctrine supplies the deeper rationale for why this assignment is graded rather than uniform. Each cakra is traditionally assigned not only a petal-count of letters but also a specific number of kalās considered active at that station, with the proportion of unstruck to struck resonance said to increase as the ascent proceeds upward — the throat and brow centres carrying a subtler ratio than the navel or root.</p>
+          <p><strong>Scholarly reception.</strong> The seven-cakra schema itself, as White and other historians of Haṭha Yoga have documented, is considerably later and more standardised than the diverse and sometimes larger cakra-systems (five, six, nine, or more centres) attested in earlier Tantric sources; the specific petal-counts given below reflect the schema that became dominant from roughly the sixteenth century onward and should not be read as uniform across the entire Tantric corpus this series surveys.</p>
+          <p>With that historical qualification in place, the table below states the standardised correspondence as a synthetic reference, not as a claim that every source this paper draws on shares an identical count:</p>
+          <table>
+            <tr><th>Station</th><th>Approx. Petal Count</th><th>Dominant Register</th></tr>
+            <tr><td>Mūlādhāra</td><td>4</td><td>Struck (Āhata) predominant</td></tr>
+            <tr><td>Svādhiṣṭhāna</td><td>6</td><td>Struck, increasingly modulated</td></tr>
+            <tr><td>Maṇipūra</td><td>10</td><td>Mixed register</td></tr>
+            <tr><td>Anāhata</td><td>12</td><td>Transition point; name itself means "unstruck"</td></tr>
+            <tr><td>Viśuddha</td><td>16</td><td>Predominantly subtle</td></tr>
+            <tr><td>Ājñā</td><td>2</td><td>Near-unstruck</td></tr>
+            <tr><td>Sahasrāra</td><td>Unbounded</td><td>Parā Nāda; beyond count</td></tr>
+          </table>
+          <p><strong>This paper's synthesis.</strong> Read together with this part's Section III, the table gives the Bahir/Antar Nyāsa distinction a graded rather than binary character: it is not simply that internal placement is "subtle" and external placement "gross," but that subtlety increases in degree along a documented ascending scale, of which the Mālinī substitution discussed in the main essay is the doctrinal marker at the uppermost, near-unstruck stations.</p>
+          <p><strong>Open question.</strong> Because petal-counts and kalā-assignments vary across the historical layers White and others document, whether the specific "dominant register" column above reflects a genuinely early doctrinal layer or a later systematising gloss retrofitted onto an earlier, less granular scheme is not fully resolved by the sources this paper has consulted.</p>
+          <p class="tab-cite">Primary · This part's Section III, Bahir/Antar Mātṛkā-Nyāsa — Secondary · White (1996) on cakra-system historical layering</p>
+        </div>
+
+        <div class="tab-panel" id="t10">
+          <h4>The Ten (Daśa) Nādas of Haṭha Tradition</h4>
+          <span class="tab-dn devanagari">दश नादाः — हठयोगपरम्परायाम्</span>
+          <p><strong>Primary claim.</strong> Certain Haṭha Yoga manuals, most notably the fourth chapter of the <em>Haṭhayogapradīpikā</em> on Nāda-anusandhāna, catalogue a graded sequence of internally audible sounds said to arise, in order, as concentration on the unstruck resonance deepens — likened variously to the sounds of ocean waves, thunderclouds, a kettle-drum, a conch, a bell, a flute, a vīṇā, a bee, and finally a sound compared to distant thunder that is said to mark the threshold just before the subtlest, most undifferentiated resonance.</p>
+          <p><strong>Scholarly reception.</strong> Manuals differ meaningfully on the exact sequence and count of these sounds — some give nine stages, others ten, others eleven — and modern scholarship on Haṭha Yoga's textual history treats this variation as evidence of an orally transmitted contemplative report subsequently written down by different compilers in different regional traditions, rather than a single fixed catalogue with one authoritative source. This paper does not treat the list as settled doctrine so much as a widely attested but textually variable contemplative report.</p>
+          <p><strong>This paper's synthesis.</strong> What the daśa-nāda catalogue contributes to the present study is primarily methodological: it treats Nāda not as a single homogeneous category but as a graded field admitting its own internal taxonomy — precisely the move the Mātṛkā/Mālinī distinction makes one register down, at the level of the phonemes Nāda eventually differentiates into. The catalogue's internal ordering (coarser, louder sounds giving way to subtler ones) mirrors, at the level of contemplative report, the same coarse-to-subtle trajectory the Nāda-Bindu-Kalā triad describes cosmogonically.</p>
+          <p><strong>Open question.</strong> Whether the specific auditory qualities catalogued (conch, bee, thunder, and so on) carry independent doctrinal significance, or are better read as culturally available similes reached for by practitioners describing an experience that resists more precise description, is a question the primary sources do not themselves adjudicate.</p>
+          <p class="tab-cite">Primary · Haṭhayogapradīpikā, Chapter 4, on Nāda-anusandhāna — Secondary · comparative Haṭha-yoga textual scholarship</p>
+        </div>
+
+        <div class="tab-panel" id="t11">
+          <h4>Kāmakalā: The Triangular Bindu of Śrīvidyā</h4>
+          <span class="tab-dn devanagari">कामकला — त्रिकोणबिन्दुः</span>
+          <p><strong>Primary claim.</strong> Śrīvidyā sources visualise the union of Śiva and Śakti bindus not as a single point but as a triangle whose three corners — two aspects of Śakti and one of Śiva, or variant configurations depending on lineage — together constitute a specifically generative form of Bindu called Kāmakalā. Where the plain Bindu examined in Tab II is a point of concentration, Kāmakalā is specifically the point considered as the origin of manifest creation, its threefold structure said by some commentators to correspond to the three-and-a-half coils of dormant Kuṇḍalinī.</p>
+          <p><strong>Scholarly reception.</strong> As with the white/red bindu material in Tab VIII, Kāmakalā doctrine is documented primarily within the Śrīvidyā-Kaula corpus and its associated ritual diagram, the Śrīcakra; it is not a term this paper's Trika sources for the main Mātṛkā/Mālinī essay employ with the same technical specificity. Scholars of Śrīvidyā ritual treat Kāmakalā as inseparable from the Śrīcakra's own geometry, such that discussing the concept in isolation from its accompanying diagram, as this tab necessarily does, omits a visual dimension the tradition itself treats as essential rather than illustrative.</p>
+          <p><strong>This paper's synthesis.</strong> Kāmakalā's relevance to the science of sound, on the synthetic reading this tab-set adopts, is that it supplies a geometric, rather than purely temporal, model of how undivided potential becomes structured multiplicity — complementing the sequential Nāda-Bindu-Kalā account with a spatial one in which the same transition is pictured as a shape rather than a process.</p>
+          <p><strong>Open question.</strong> Whether the temporal (Nāda-Bindu-Kalā) and spatial (Kāmakalā) models are best read as two independent descriptions of the same underlying event, arrived at by different lineages, or whether one should be treated as doctrinally prior to and generative of the other, is not settled by the comparative sources this paper draws on.</p>
+          <p class="tab-cite">Primary · Śrīvidyā Kāmakalā and Śrīcakra doctrine — Secondary · comparative Śrīvidyā ritual scholarship</p>
+        </div>
+
+        <div class="tab-panel" id="t12">
+          <h4>Spanda: The Pulse Beneath Nāda</h4>
+          <span class="tab-dn devanagari">स्पन्दः — नादस्य अन्तर्गतं स्पन्दनम्</span>
+          <p><strong>Primary claim.</strong> The Spanda school within Kashmir Śaivism, whose foundational text is the <em>Spandakārikā</em> traditionally attributed to Vasugupta or his disciple Kallaṭa, describes consciousness not as static luminosity alone but as possessing an intrinsic, minute vibratory pulse — spanda — even in states ordinarily considered perfectly still. Several commentators treat Spanda as the still finer substrate Nāda itself depends on: Nāda is resonance already differentiated enough to be called "sound" in even the most attenuated sense, whereas Spanda is the bare fact of self-referential movement within consciousness that makes any resonance, sound included, possible in the first place.</p>
+          <p><strong>Scholarly reception.</strong> Dyczkowski's dedicated study, <em>The Doctrine of Vibration</em>, is careful to distinguish Spanda as a formal school with its own textual lineage (Spandakārikā and its commentaries) from spanda as a general technical term used more loosely across other Śaiva sources; not every text that uses the word "spanda" is drawing on the Spanda school's specific doctrinal apparatus, and Dyczkowski cautions against treating every occurrence of the term as evidence of that school's direct influence.</p>
+          <p><strong>This paper's synthesis.</strong> With that terminological caution registered, the school's central claim is directly relevant here: the science of sound this tab-set surveys does not terminate in Nāda as its final, irreducible ground; Spanda names one further, subtler stratum beneath it — a reminder that even a triadic doctrine this comprehensive is, within the tradition's own terms, provisional rather than final. This connects directly to the Vimarśa doctrine this series' Part Three already treated as consciousness's self-referential pulse; several scholars, including Dyczkowski, effectively treat spanda and vimarśa as near-synonyms operative at different points in Abhinavagupta's synthesis of earlier Spanda-school and Pratyabhijñā materials.</p>
+          <p><strong>Open question.</strong> Whether spanda and vimarśa are, in Abhinavagupta's mature synthesis, fully identical terms for a single reality or retain a subtle distinction of emphasis (spanda stressing dynamic movement, vimarśa stressing reflective self-awareness) is a genuinely debated point within Kashmir Śaiva scholarship that this paper does not claim to resolve.</p>
+          <p class="tab-cite">Primary · Spandakārikā tradition — Secondary · Dyczkowski (1989); series Part Three on Vimarśa</p>
+        </div>
+
+        <div class="tab-panel" id="t13">
+          <h4>Objective Register: Acoustic Physics Compared</h4>
+          <span class="tab-dn devanagari">ध्वनिविज्ञानदृष्ट्या तुलना</span>
+          <p><strong>Primary claim (physics).</strong> Held to a strictly objective, comparative standard, the Nāda-Bindu-Kalā doctrine and modern acoustic physics describe different domains and should not be conflated: acoustic physics treats sound as pressure-wave propagation through a physical medium, fully specified by frequency, amplitude, and waveform, with no doctrinal commitment to a pre-physical "unstruck" resonance. The tradition's Nāda, by contrast, is explicitly not a claim about pressure waves; it is a phenomenological and metaphysical category describing a form of resonance the tradition holds to be prior to, and the ground of, any physically propagating sound.</p>
+          <p><strong>Where a structural analogy is defensible.</strong> A structural resonance does exist between the two frameworks in the shared observation that any bounded, differentiated waveform can be understood as a modulation of a more general vibratory capacity — the physicist's underlying medium, the tradition's underlying Nāda; and, more specifically, that a complex periodic waveform can be decomposed (via Fourier analysis) into a sum of simpler component frequencies, which bears a loose structural resemblance to Kalā's role in fractioning an undivided Bindu into multiple differentiated components. The resemblance is formal, not causal or explanatory.</p>
+          <p><strong>Where the analogy breaks down.</strong> The disanalogies are at least as important as the resemblance and should not be elided for the sake of a tidy parallel: Fourier decomposition is a mathematical description of an already-physical waveform with no claim about a prior, non-physical "unstruck" state; the tradition's Nāda-Bindu-Kalā sequence, by contrast, makes an explicit ontological claim — that consciousness itself, prior to and independent of any physical medium, possesses an intrinsic vibratory capacity. No experiment in acoustic physics is designed to, or capable of, adjudicating that further ontological claim one way or the other, since it lies outside what physical measurement of pressure waves can address.</p>
+          <p><strong>This paper's position.</strong> This paper states the parallel at the structural level only, offered as a pedagogically useful comparison for readers approaching the tradition from a modern scientific background, and explicitly does not claim that acoustic physics thereby validates, explains, or reduces to the tradition's metaphysical claims, nor that the tradition's claims constitute an alternative or superior physics. The two frameworks answer different questions and neither confirms nor refutes the other.</p>
+          <p class="tab-cite">Comparative register only — offered as structural analogy, not equivalence or validation</p>
+        </div>
+
+        <div class="tab-panel" id="t14">
+          <h4>The Praṇava (Oṃ) Read Through the Triad</h4>
+          <span class="tab-dn devanagari">ॐ-विश्लेषणम् नादबिन्दुकलादृष्ट्या</span>
+          <p><strong>Primary claim.</strong> The syllable Oṃ is traditionally analysed into more than its three audible phonemic components (a-u-m); the Māṇḍūkya Upaniṣad's fourth mātrā, often called ardhamātrā ("the half-measure") or turīya ("the fourth"), is described there in relation to the three preceding waking, dreaming, and deep-sleep states rather than explicitly identified with Bindu in the Upaniṣad's own terms. Later Tantric commentary, rather than the Upaniṣad itself, is where this fourth element becomes more directly correlated with Bindu, and a still subtler trailing Nāda, in the specific sense this tab-set has been developing.</p>
+          <p><strong>Scholarly reception.</strong> This paper flags that distinction deliberately: the Māṇḍūkya's own primary concern is the four states of consciousness (waking, dreaming, deep sleep, and turīya as their ground), and its use of Oṃ's four mātrās is in service of that psychological-metaphysical scheme rather than a self-standing statement of Nāda-Bindu-Kalā cosmogony. The Tantric reading offered below is therefore best understood as a later, doctrinally motivated overlay of one framework onto another textually and historically distinct one — a move consistent with this series' general practice of showing how originally separate frameworks come to be read together, but one that should not be mistaken for the Upaniṣad's own explicit teaching.</p>
+          <p><strong>This paper's synthesis.</strong> With that overlay made explicit rather than implicit, Oṃ can be read as a compact, audible model of the entire Nāda-Bindu-Kalā descent: three struck phonemes (Kalā's differentiated product), converging on a silent point (read here as Bindu), itself resolving into unstruck resonance (Nāda) and, beyond even that, silence. This reading gives the present tab-set's whole argument a single, recitable anchor: to pronounce Oṃ attentively, letting the sound trail into the silence that follows it, is — on this paper's synthetic reading, not the Upaniṣad's own explicit claim — to trace the entire cosmogony this part has surveyed in miniature, once per recitation.</p>
+          <p><strong>Open question.</strong> Whether the Tantric Nāda-Bindu-Kalā overlay onto Oṃ's fourth mātrā represents a faithful extension of the Māṇḍūkya's own logic or a distinct doctrinal project borrowing its authority is a question of textual history this paper does not claim to settle.</p>
+          <p class="tab-cite">Primary · Māṇḍūkya Upaniṣad, verse 1 (four mātrās); later Tantric commentarial overlay</p>
+        </div>
+
+        <div class="tab-panel" id="t15">
+          <h4>Closing Synthesis: Why the Science of Sound Begins Here</h4>
+          <span class="tab-dn devanagari">उपसंहारः — शब्दविद्यायाः आरम्भबिन्दुः</span>
+          <p>The fourteen tabs above converge on a single claim, stated here at the highest level of generality this paper permits itself: any study of sound that begins directly with the fifty phonemes — whether in the natural Mātṛkā order or the interleaved Mālinī order this part's main essay has examined at length — begins one stage too late. The tradition's own account insists that phoneme presupposes Kalā, Kalā presupposes Bindu, and Bindu presupposes Nāda, so that a truly first-principles science of sound must be a science of resonance, concentration, and radiance before it is a science of letters at all.</p>
+          <p>This is offered as this tab-set's own synthetic reading, not as a settled scholarly consensus: the specific sequencing, terminology, and correspondences vary meaningfully across the Śaiva, Śākta, and Haṭha sources surveyed above, and a reader pursuing any single tab further will find genuine, unresolved variation beneath the unified presentation given here for the sake of a coherent overview.</p>
+          <p class="tab-cite">Cross-reference · This part's Final Synthesis, above</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <div class="danda">॥ ॥ ॥</div>
+
   <footer>
     Cultural Musings · Series A Extended · Part Four — Mātṛkā and Mālinī: Two Orderings of the Same Fifty Powers
   </footer>
+
+  <script>
+    (function(){
+      var buttons = document.querySelectorAll('.tab-btn');
+      var panels = document.querySelectorAll('.tab-panel');
+      buttons.forEach(function(btn){
+        btn.addEventListener('click', function(){
+          buttons.forEach(function(b){ b.classList.remove('active'); b.setAttribute('aria-selected','false'); });
+          panels.forEach(function(p){ p.classList.remove('active'); });
+          btn.classList.add('active');
+          btn.setAttribute('aria-selected','true');
+          var target = document.getElementById(btn.getAttribute('data-tab'));
+          if(target){ target.classList.add('active'); }
+          btn.scrollIntoView({ behavior:'smooth', inline:'center', block:'nearest' });
+        });
+      });
+    })();
+  </script>
 
 </div>
 </body>
